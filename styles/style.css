@@ -201,10 +201,28 @@ ol {
   align-items: center;
 }
 
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background-color: currentColor;
+}
+
+.search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.search-form__checkbox-list .search-form__label:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
 .search-form__pseudo-checkbox {
+  position: relative;
   inline-size: 19px;
   block-size: 19px;
-  border: 1px solid white;
+  border: 1px solid currentColor;
 }
 
 .button {
