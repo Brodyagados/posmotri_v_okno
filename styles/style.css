@@ -45,6 +45,7 @@ ol {
 
 .button {
   font-family: inherit;
+  font-weight: 700;
   inline-size: 100%;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -111,6 +112,8 @@ ol {
 
 .result__video {
   inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* #endregion */
@@ -137,6 +140,7 @@ ol {
   display: flex;
   inline-size: fit-content;
   margin-top: 5px;
+  align-items: center;
 }
 
 .search-form__label:focus {
@@ -236,10 +240,13 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
   position: relative;
   block-size: 298px;
   overflow-y: auto;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
 }
 
 .content__card-link {
