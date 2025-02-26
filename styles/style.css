@@ -136,12 +136,21 @@ ol {
 .search-form__label {
   display: flex;
   inline-size: fit-content;
+  margin-top: 5px;
+}
+
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
 }
 
 .search-form__textfield {
   appearance: none;
   inline-size: 225px;
-  margin-top: 5px;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -156,11 +165,6 @@ ol {
 
 .search-form__textfield:focus {
   outline: none;
-}
-
-.search-form__textfield:focus-visible {
-  outline: 1px solid currentColor;
-  outline-offset: 1px;
 }
 
 .search-form__textfield::placeholder {
