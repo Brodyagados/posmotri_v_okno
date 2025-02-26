@@ -94,13 +94,13 @@ ol {
 
 .result__video {
   inline-size: 100%;
-  block-size: 100%;
 }
 
 .content__video-card {
   display: flex;
   align-items: start;
   justify-content: space-between;
+  padding: 2px;
 }
 
 .content__video-card-thumbnail {
@@ -109,6 +109,9 @@ ol {
 }
 
 .content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   flex-grow: 1;
 }
 
@@ -135,7 +138,12 @@ ol {
   text-decoration: none;
 }
 
+.content__card-link.content__card-link_current .content__video-card {
+  background-color: #545050;
+}
+
 .content__video-card-title {
+  font-family: Oswald, Arial, Helvetica, sans-serif;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
